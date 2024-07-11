@@ -2,11 +2,35 @@
 
 ## FILTERING CITRA
 
+### PENGERTIAN 
+
+Filtering citra adalah proses memanipulasi atau memodifikasi citra digital menggunakan berbagai teknik matematis atau algoritma untuk mencapai tujuan tertentu, seperti penyempurnaan kualitas citra, reduksi noise, atau ekstraksi fitur penting. Teknik filtering sangat umum digunakan dalam pengolahan citra dan dapat dilakukan dalam domain spasial (domain ruang piksel) atau domain frekuensi (domain transformasi Fourier).
+
+### JENIS-JENIS FILTERING CITRA
+- Spatial Filtering (Filtering Spasial):
+   - Linear Filtering: Menggunakan kernel (matriks) linier untuk mengubah nilai piksel dengan melakukan         konvolusi terhadap citra. Contoh kernel yang umum digunakan termasuk filter rata-rata (mean filter),       filter Gaussian, dan filter sharpening.
+   - Non-linear Filtering: Memanipulasi nilai piksel berdasarkan perhitungan yang tidak linier, seperti         filter median untuk mengurangi noise salt-and-pepper atau filter mode untuk mengurangi noise pada          citra yang tidak homogen.
+Frequency Domain Filtering (Filtering Domain Frekuensi):
+    Citra dapat diproses dalam domain frekuensi menggunakan transformasi Fourier untuk menerapkan filter       dalam spektrum frekuensi. Ini dapat berguna untuk aplikasi seperti pemulihan citra dari blur atau          penekanan frekuensi tertentu.
+
+### TUJUAN FILTERING CITRA
+- Noise Reduction (Reduksi Noise): Mengurangi noise atau gangguan yang tidak diinginkan dalam citra, seperti noise salt-and-pepper atau noise Gaussian.
+
+- Edge Enhancement (Peningkatan Tepi): Meningkatkan kontras tepi dan detail pada citra untuk membuat tepi objek lebih jelas dan terdefinisi.
+
+- Image Smoothing (Peglataan Citra): Mengurangi variasi intensitas piksel yang tajam untuk menciptakan tampilan yang lebih halus dan lebih mudah diolah.
+
+- Feature Extraction (Ekstraksi Fitur): Menyoroti fitur-fitur tertentu dalam citra untuk analisis lebih lanjut, seperti deteksi tepi atau deteksi titik.
+
+## PROJECT
+
 ### GAMBAR ASLI
+
 ![https://github.com/bataraPutra/PA-PC_202231126_ANANDABATARAPUTRA_B/blob/main/myself.jpg](https://github.com/bataraPutra/PA-PC_202231126_ANANDABATARAPUTRA_B/blob/main/myself.jpg)
 
 
 ### Lokasi 
+
 ![https://github.com/bataraPutra/pcduasdokumentasi/blob/main/loc.jpg
 ](https://github.com/bataraPutra/pcduasdokumentasi/blob/main/loc.jpg)
 
@@ -87,9 +111,18 @@ ax[1].axis('on')
 
 plt.show()
 ```
+
+Penjelasan :
+Kode ini melakukan beberapa langkah untuk memproses dan menampilkan gambar. Pertama, gambar dimuat dengan menggunakan OpenCV dan dikonversi dari format warna BGR ke RGB agar bisa ditampilkan dengan benar menggunakan Matplotlib. Setelah itu, gambar yang sudah dikonversi ke RGB disimpan dalam variabel image_rgb.
+
+Selanjutnya, program menginisialisasi array median_filtered yang memiliki dimensi yang sama dengan image_rgb, tetapi diisi dengan nilai nol. Kemudian, dilakukan filter median pada setiap channel warna (R, G, B) dari gambar menggunakan kernel berukuran 3x3. Hasil dari proses ini disimpan dalam variabel median_filtered.
+
+Terakhir, gambar asli (image_rgb) dan gambar yang telah difilter (median_filtered) ditampilkan dalam satu jendela plot menggunakan Matplotlib, dengan judul yang sesuai untuk setiap gambar.
+
 Output :
 
-![https://github.com/bataraPutra/pcduasdokumentasi/blob/main/Screenshot%202024-07-10%20204630.png](https://github.com/bataraPutra/pcduasdokumentasi/blob/main/Screenshot%202024-07-10%20204630.png)
+![https://github.com/bataraPutra/pcduasdokumentasi/blob/main/medianfiltered.png
+](https://github.com/bataraPutra/pcduasdokumentasi/blob/main/medianfiltered.png)
 
 8. Mean Filtering
 ``` bash
@@ -171,3 +204,10 @@ Di baris kedua, dua gambar lainnya (image_gray dan citra) ditampilkan. Gambar pe
 Output :
 
 ![https://github.com/bataraPutra/pcduasdokumentasi/blob/main/Screenshot%202024-07-11%20204948.png](https://github.com/bataraPutra/pcduasdokumentasi/blob/main/Screenshot%202024-07-11%20204948.png)
+
+### REFERENSI DAN JURNAL TERKAIT
+
+1. Digital Image Processing by Rafael C. Gonzalez and Richard E. Woods - Buku ini merupakan referensi utama dalam pengolahan citra digital yang mencakup berbagai teknik filtering dan aplikasinya.
+
+2. Digital Image Processing: Concepts, Algorithms, and Scientific Applications by Bernd Jähne - Buku ini menyediakan tinjauan mendalam tentang berbagai konsep dan teknik dalam pengolahan citra digital, termasuk filtering.
+
